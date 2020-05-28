@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+	<head>
+		<title>Más elementos HTML</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Curso HTML</strong></a>
+					</header>
+
+					<!-- Content -->
+					<section>
+						<header class="main">
+							<h1>Más elementos HTML</h1>
+						</header>
+
+						<p>Como prometí, aquí hay una lista de nuevas etiquetas para usar:</p>
+
+						<div class="box">
+
+							<h3>&lta>&lt/a></h3>
+							<p>Es un texto el cual al hacerle clic, te lleva a otra página (un link).</p>
+
+							<a href="https://www.google.com">Ir a Google</a>
+
+							<pre>
+							<code>
+&lta href="https://www.google.com">Ir a Googles&lt/a>
+							</code>
+						</pre>
+
+							<p>Como verás, esta etiqueta recibe un parámetro llamado “href” en el cual vas a poner el
+								link
+								al que quieras redireccionar al usuario.</p>
+
+						</div>
+
+						<div class="box">
+
+							<h3>&lttable>&lt/table></h3>
+							<p>Es un contenedor, en el cual se puede escribir contenido como si fuera una tabla. Quizás
+								esta sea un poco complicada de ver al principio.</p>
+
+							<table class="no-format">
+								<tr>
+									<td>Hola</td>
+									<td>Soy</td>
+								</tr>
+								<tr>
+									<td>Una</td>
+									<td>Tabla</td>
+								</tr>
+							</table>
+
+							<pre>
+								<code>
+&lttable>
+  &lttr>
+	&lttd>Hola &lt/td>
+	&lttd>Soy &lt/td>
+  &lt/tr>
+  &lttr>
+	&lttd>Una &lt/td>
+	&lttd>Tabla &lt/td>
+  &lt/tr>
+&lt/table>
+								</code>
+							</pre>
+
+							<p>Si es complicado ver la tabla, agrega en la primera etiqueta “&lttable>” un “border=1”,
+								así:</p>
+
+							<pre>
+								<code>
+&lttable border=1>
+								</code>
+							</pre>
+
+							<p>Pasando a la explicación, para cada fila horizontal, hay que poner una etiqueta
+								“&lttr>&lt/tr>” dentro de este “tr”, vas a poner un “&lttd>&lt/td>” el cual representa
+								una celda, en donde se puede escribir. Si te lo estás preguntando, dentro de un “&lttd>”
+								se puede poner cualquier otra etiqueta, como “&ltimg>”, “&ltp>”, “&lth1>”, e incluso
+								otro “&lttable>”.</p>
+
+						</div>
+
+						<div class="box">
+							<h3>&ltul>&lt/ul></h3>
+
+							<p>Es una lista como la que ves abajo. </p>
+
+							<ul>
+								<li>Texto de ejemplo 1</li>
+								<li>Texto de ejemplo 2</li>
+							</ul>
+
+							<pre>
+								<code>
+&ltul>
+	&ltli>Texto de ejemplo 1&lt/li>
+	&ltli>Texto de ejemplo 2&lt/li>
+&lt/ul>	
+								</code>
+							</pre>
+
+							<p>Para indicar un ítem, coloca una etiqueta “&ltli>&lt/li>” y dentro escribe lo que
+								quieras.</p>
+
+						</div>
+
+						<div class="box">
+							<h3>&ltol>&lt/ol></h3>
+
+							<p>Es casi igual que la anterior con la diferencia de que en vez de puntos, hay números.</p>
+
+							<ol>
+								<li>Texto de ejemplo 3</li>
+								<li>Texto de ejemplo 4</li>
+							</ol>
+
+							<pre>
+								<code>
+&ltol>
+	&ltli>Texto de ejemplo 3&lt/li>
+	&ltli>Texto de ejemplo 4&lt/li>
+&lt/ol>
+								</code>
+							</pre>
+
+							<p>Para indicar un ítem, coloca una etiqueta “&ltli>&lt/li>” y dentro escribe lo que
+								quieras.</p>
+
+						</div>
+
+					</section>
+
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+
+</html>

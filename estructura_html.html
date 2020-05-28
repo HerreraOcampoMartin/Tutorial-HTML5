@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+    <head>
+        <title>Estructura de HTML</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <!-- Header -->
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Curso HTML</strong></a>
+                    </header>
+
+                    <!-- Content -->
+                    <section>
+                        <header class="main">
+                            <h1>Estructura básica de HTML</h1>
+                        </header>
+
+                        <p>
+                            Primero hay que entender que HTML funciona con
+                            “etiquetas” que son aquellos textos que se
+                            encuentran entre “<” y “>”, hasta el momento solo
+                                viste “&lth1&gt” pero una muchísimas más. Por lo
+                                general, las etiquetas van en pares, es decir, hay
+                                dos iguales. Volviendo al caso anterior:
+                        </p>
+
+                        <pre><code>&lth1&gt Hola mundo &lt/h1&gt</code></pre>
+
+                        <p>
+                            Entre las dos etiquetas “&lth1&gt” irá el texto
+                            que queremos mostrar, o, más bien título, porque
+                            esta etiqueta es para definir el título principal.
+                            Como verás, al final al “&lth1&gt” se le agrega
+                            una “/”, esto indica el cierre de etiqueta.
+                        </p>
+
+                        <p>
+                            Una página HTML tiene una estructura básica, que es
+                            algo como esto:
+                        </p>
+
+                        <pre>
+                            <code>
+&lthtml&gt 
+
+	&lthead&gt 
+	&lt/head&gt
+
+	&ltbody&gt 
+	&lt/body&gt
+                                
+&lt/html&gt
+                            </code>
+						</pre>
+
+                        <p>
+                            Vamos por partes ¿Qué es esa etiqueta “&lthtml&gt”
+                            que se abre y se cierra al principio y al final? Eso
+                            indica que vamos a escribir código HTML, no es 100%
+                            necesario, pero muy recomendable. Luego tenemos
+                            otras dos etiquetas dentro de “&lthtml&gt”, “&lthead&gt”
+                            y “&ltbody&gt”.
+                        </p>
+
+                        <p>
+                            <b>&lthead&gt</b><br />
+                            En esta etiqueta vamos a poner algunas
+                            configuraciones de la página web que veremos más
+                            adelante, por ahora, dejémoslo estar.
+                        </p>
+
+                        <p>
+                            <b>&ltbody&gt</b><br />
+                            Dentro de esta etiqueta vamos a escribir el 99% de
+                            lo que se verá en la página, es aquí donde
+                            deberíamos poner nuestro “&lth1&gt”.
+                        </p>
+
+                        <p>
+                            <b>Nuevas etiquetas</b><br />
+                            Lista de etiquetas que te pueden ser útiles:
+                        </p>
+
+                        <table>
+                            <tr>
+                                <th>Etiqueta</th>
+                                <th>Descripción</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &lth1>, &lth2>, &lth3>, &lth4>, &lth5> y &lth6>
+                                </td>
+                                <td>
+                                    Indican títulos, &lth1> tiene la letra más
+                                    grande, mientras que &lth6> tiene una letra
+                                    más pequeña.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &ltp>&lt/p> </td>
+                                <td>
+                                    Indican un párrafo, en él escribirás el
+                                    texto que quieras.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &ltb>
+                                    &lt/b> </td>
+                                <td>
+                                    Indican textos con negrita, <b>como este</b>
+                                </td>
+                            </tr>
+                            <tr style="background-color: yellow; color: black;">
+                                <td>
+                                    &lthr/>
+                                </td>
+                                <td>Insertar una línea separadora.</td>
+                            </tr>
+                            <tr style="background-color: yellow; color: black;">
+                                <td>
+                                    &ltbr/>
+                                </td>
+                                <td>Insertar un salto de línea</td>
+                            </tr>
+                        </table>
+
+                        <p>
+                            Como verás, las últimas dos filas están resaltadas
+                            con un amarillo, eso indica que cuando escribas
+                            estas etiquetas, nunca vas a poner otra con cierre,
+                            es decir, a diferencia que, por ejemplo los “&lth1>”, no vas a poner dos, sólo una.
+                            <b>La mejor manera de entender bien esto es con un
+                                ejemplo.</b>
+                        </p>
+
+                        <pre>
+                            <code>
+&lthtml>
+    &lthead>
+
+    &lt/head>
+
+    &ltbody>
+        
+        &lth1>Primera página web &lt/h1>
+        &ltp>Hola, esta es mi &ltb>primera página web &lt/b>&lt/p>
+
+        &lthr />
+
+        &lth2>Este es un título secundario &lt/h2>
+        &ltp>En este párrafo iría más texto. &lt/p>
+
+    &lt/body>
+&lt/html>
+                            </code>
+                        </pre>
+
+                        <p>Recordar que siempre dentro de una etiqueta que se abre y se cierra, se puede poner otra
+                            etiqueta dentro, como en el primer “&ltp>” que tiene un “&ltb>” dentro.
+                            Como verás, el “
+                            &lthr/>” no tiene una segunda etiqueta que indique su cierre, eso es
+                            a lo que me refería.</p>
+
+                        <p>El resultado sería algo como esto:</p>
+
+                        <div class="box">
+                            <h1>Primera página web</h1>
+                            <p>Hola, esta es mi <b>primera página web</b></p>
+
+                            <hr />
+
+                            <h2>Este es un título secundario</h2>
+                            <p>En este párrafo iría más texto.</p>
+                        </div>
+
+
+                        <p>El primer título, que es el más grande es el “&lth1>”, el texto debajo es un “&ltp>”. En el
+                            medio hay una línea separadora que es el “&lthr />” y debajo está el título
+                            secundario, “&lth2>” y más texto "&ltp>".</p>
+
+                        <p>Ahora, deberías ponerte unos minutos por tu cuenta a jugar un poco con
+                            este código, probar el resto de títulos (h3, h4, h5, etc), escribir un
+                            poco de texto, probar que pasa cuando no se cierra una etiqueta y lo que
+                            se te ocurra, <b>no te de miedo probar, no se rompe ;) </b></p>
+
+                        <p>Para la próxima clase trabajaremos con imágenes.</p>
+
+                        <a href="./imagenes_html.html" class="button">Siguiente >></a>
+
+                    </section>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+
+</html>
