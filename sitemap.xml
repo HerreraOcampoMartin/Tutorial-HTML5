@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 	<url>
@@ -19,6 +19,16 @@
 
 	<url>
 		<loc>https://crear-paginas-web.netlify.app/mas_elementos_html.html</loc>
+		<changefreq>never</changefreq>
+	</url>
+
+	<url>
+		<loc>https://crear-paginas-web.netlify.app/crear-paginas.html</loc>
+		<changefreq>never</changefreq>
+	</url>
+
+	<url>
+		<loc>https://crear-paginas-web.netlify.app/editores_codigo.html</loc>
 		<changefreq>never</changefreq>
 	</url>
 
