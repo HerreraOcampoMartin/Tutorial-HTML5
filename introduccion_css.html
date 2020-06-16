@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+    <head>
+        <title>Introducción a CSS</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description"
+            content="Hoy seguiremos con nuestro camino al aprendizaje del desarrollo web y vas a aprender CSS, un lenguaje de estilos. CSS te permite diseñar tus páginas web, poner colores, fondos, imagenes, y mucho más">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style>
+            .muestra {
+                background-color: red;
+                color: white;
+                width: 35%;
+                padding: 10px;
+                height: 30vh;
+                margin: 20px auto;
+                border: 1px solid black
+            }
+        </style>
+    </head>
+
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <!-- Header -->
+                    <header id="header">
+                        <a href="index.html" class="logo"><strong>Introducción a CSS</strong></a>
+                    </header>
+
+                    <!-- Content -->
+                    <section>
+                        <header class="main">
+                            <h1>Introducción a CSS</h1>
+                        </header>
+
+                        <p>Bienvenido, nuevamente, a mi sitio web, en donde te estoy dando una breve introducción al
+                            desarrollo web. En esta ocasión, vamos a empezar con CSS (de las siglas en inglés Cascade
+                            Style Sheet).</p>
+
+                        <h3>¿Qué es CSS?</h3>
+                        <p>CSS es un lenguaje de estilos, es decir, que vamos a poder incorporar colores, cuadros,
+                            dibujos, como queremos ordenar nuestra página, por ejemplo si queremos poner una serie de
+                            botones (los cuales colocaremos con HTML), CSS nos permite ponerles colores, animaciones,
+                            dibujos, si queremos que estén en una línea horizontal o vertical, y mucho más.</p>
+                        <p>Para empezar, vamos a nuestro editor de código de preferencia, en mi caso VS Code, en el
+                            artículo anterior, vimos una breve introducción a que es un editor de código. Anteriormente,
+                            teníamos una carpeta abierta en nuestro editor, en la cual había un archivo “index.html”,
+                            ahora, vamos a crear otro archivo, haz clic derecho sobre el nombre de la carpeta de trabajo
+                            (en la barra de la izquierda) y “nuevo archivo” al cual llamaremos “styles.css”; guardamos.
+                            Dentro escribiremos esto:</p>
+
+                        <div>
+                            <pre>
+                                <code>
+body{
+    background-color: red;
+    color: white;
+}                                        
+                                </code>
+                            </pre>
+                        </div>
+
+                        <p>Vamos por partes, lo primero que vemos es que al principio dice “body”, esta es la etiqueta
+                            HTML que queremos editar, como sabrás, en la estructura básica HTML, existe la etiqueta “
+
+                            &ltbody>”, en donde va el contenido de la página. Luego se abre y se cierran “{“ y “}”,
+                            dentro
+                            de estas llaves, se escriben las propiedades y las características que queremos añadir.
+                            En este caso está “background-color” que como supondrás es para definir el fondo de la
+                            página, seguido de dos puntos (“:”), y el valor que le queremos dar, en este caso “red”,
+                            es decir, que el fondo de la página que estamos creando será rojo. Luego está “color”,
+                            el cual determina el color de las letras, si añades algún texto en el HTML, será de
+                            color blanco.
+                            Pero, si pruebas a abrir tu página, no verás ningún cambio, ¡todo sigue igual! Eso es
+                            porque hay que vincular los dos archivos, para ello debes ir a la etiqueta “
+                            &lthead>” del HTML y escribir:
+                        </p>
+
+                        <div>
+                            <pre>
+                                    <code>
+&ltlink src=”./styles.css”>
+                                    </code>
+                                </pre>
+                        </div>
+
+                        <div class="muestra">
+                            Así quedaría tu página web si escribes texto conectando el archivo CSS.
+                        </div>
+
+                        <p>Esta línea de código establece un vínculo (o link, en inglés) entre el HTML y el CSS, dentro
+                            de la etiqueta “
+                            &ltlink>” hay una atributo “src” que indica la ruta del archivo CSS, como en nuestro caso,
+                            el
+                            CSS, está en la misma carpeta que el HTML, basta con escribir “./styles.css”.
+                            Ahora sí, abre tu página web y verás que hay cambios, hay muchos más colores y propiedades
+                            CSS (entre colores hay “blue”, “green”, “yellow”, “black”, y los colores en inglés), también
+                            hay colores personalizables, pero para ello necesitas usar un código hexadecimal, la palabra
+                            parece complicada, pero es super fácil aprender a usarlos, te recomiendo que entres a google
+                            y busques “color picker” te saldrá una herramienta que te permite elegir un color, cuando
+                            tengas uno que te guste, copia los números y letras que empiezan con un “#” (incluyendo el
+                            numeral) y pégalo en el lugar de la propiedad que quieras por ejemplo:
+                        </p>
+
+                        <div>
+                            <pre>
+                                        <code>
+body{
+    color: #ff8996
+}                                                
+                                        </code>
+                                    </pre>
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+
+</html>
