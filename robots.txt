@@ -1,0 +1,3 @@
+User-agent: * Disallow: /
+
+Sitemap: https://crear-paginas-web.netlify.app/sitemap.xml

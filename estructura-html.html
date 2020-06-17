@@ -13,6 +13,13 @@
         <meta name="description"
             content="Hoy veremos la estructura básica de un archivo HTML y de una página web. Aprenderemos que es 'body', 'head', y más!">
         <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" type="image/png" href="./images/mini_logo.png">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Aprender a crear páginas web - Estructura HTML" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://crear-paginas-web.netlify.app/estructura-html.html" />
+        <meta property="og:image" content="./images/logo.png" />
     </head>
 
     <body class="is-preload">
@@ -23,11 +30,11 @@
                 <div class="inner">
                     <!-- Header -->
                     <header id="header">
-                        <a href="index.html" class="logo"><strong>Curso HTML</strong></a>
+                        <a href="index.html" class="logo"><img src="./images/logo.png" alt="Logo"></a>
                     </header>
 
                     <!-- Content -->
-                    <section>
+                    <section itemscope itemtype="http://schema.org/tech">
                         <header class="main">
                             <h1>Estructura básica de HTML</h1>
                         </header>
@@ -204,7 +211,7 @@
 
                         <p>Para la próxima clase trabajaremos con imágenes.</p>
 
-                        <a href="./imagenes_html.html" class="button">Siguiente >></a>
+                        <a href="./imagenes-html.html" class="button">Siguiente >></a>
 
                     </section>
                 </div>
