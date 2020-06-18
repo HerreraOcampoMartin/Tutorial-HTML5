@@ -3015,6 +3015,10 @@ button:disabled,
     width: calc(100% + 4.5em);
   }
 
+  .imagen {
+    width: 100% !important;
+  }
+
   .posts article {
     margin: 0 0 4.5em 4.5em;
     width: calc(50% - 4.5em);
@@ -3093,6 +3097,10 @@ button:disabled,
   padding: 0 6em 0.1em 6em;
   margin: 0 auto;
   max-width: 110em;
+}
+
+.imagen {
+  width: 50%
 }
 
 #main>.inner>section {
