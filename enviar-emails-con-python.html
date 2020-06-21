@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+    <head>
+        <title>Como enviar emails con Python - Aprender a programar</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description"
+            content="En este pequeño tutorial vamos a aprender a crear un programa con python que permita enviar correos electrónicos.">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" type="image/png" href="./images/mini_logo.png">
+
+        <meta property="og:title" content="Enviar emails con python" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://crear-paginas-web.netlify.app/enviar-emails-con-python.html" />
+        <meta property="og:image" content="./images/logo.png" />
+    </head>
+
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <!-- Header -->
+                    <header id="header">
+                        <a href="index.html" class="logo"><img src="./images/logo.png" alt="Logo"></a>
+                    </header>
+
+                    <!-- Content -->
+                    <section itemscope itemtype="http://schema.org/tech">
+                        <header class="main">
+                            <h1>Enviar un correo electrónico desde Python</h1>
+                        </header>
+                        <p>¿Cómo enviar emails con python? Existe una librería llamada <strong>smtplib</strong> la
+                            cual te permite
+                            hacer esto. Primero que nada, yo voy a hacer un ejemplo con gmail, funciona con otras
+                            plataformas, pero hay ligeros cambios que te voy a explicar.</p>
+                        <p>Antes de nada, hay que configurar tu correo electrónico, en el caso de gmail (que es la
+                            plataforma que yo uso) le tengo que avisar que una aplicación va a enviar e-mails con mi
+                            cuenta.
+                            <br />Para la configuración hay que seguir estos pasos:
+                        </p>
+                        <ul>
+                            <li>Ir a la pantalla principal de gmail</li>
+                            <li>Clic en tu foto arriba a la derecha y dale a “Administrar tu cuenta de google”</li>
+                            <li>Se va a abrir una ventana y en el menú de la izquierda vas a hacer clic en “Seguridad”.
+                            </li>
+                            <li>Bajar hasta encontrar la opción ingresar a Google.</li>
+                            <li>Hay un apartado llamado “Contraseña de aplicaciones”, clic ahí.</li>
+                            <li>Vas a ir a la parte de abajo del todo donde te da la opción de crear una nueva
+                                contraseña.</li>
+                            <li>Da igual la configuración que pongas, pero para saber que estás usando selecciona
+                                “Correo” o
+                                “Mail” y en dispositivo “Computadora”.</li>
+                            <li>Una vez que le des a generar, te saldrá un cartel con una caja amarilla arriba a la
+                                derecha
+                                con un código, copia el código y guárdalo en algún lugar esa va a ser la clave de tu
+                                aplicación.</li>
+
+                        </ul>
+                        <p>¡Ahora sí, a programar!</p>
+
+                        <ol>
+                            <li>
+                                <p>Primero hay que importar las librerías que vamos a usar:
+                                </p>
+                                <pre>
+                                    <code>
+import smtplib
+from email.mime.text import MIMEText
+                                    </code>
+                                </pre>
+
+                                <p><strong>smtplib</strong> sirve para enviar correos electrónicos.<br />
+                                    <strong>MIMEText</strong> sirve para incluir caracteres especiales como tildes.</p>
+
+                            </li>
+                            <li>
+                                <p>Luego creamos dos variables que contengan tu correo y contraseña:</p>
+                                <pre>
+                                    <code>
+email = "correo@ejemplo.com"
+clave = "tu contraseña"
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <p>Creamos una función que recibe tres parámetros: <i>email_del_emisor, clave, receptor</i> y
+                                    dentro habrá un <i>try/except</i> ya que existen muchas posibilidades de error, como falta
+                                    de conexión, email equivocado, etc.</p>
+                                <pre>
+                                    <code>
+def mandar_mail(emisor, clave, receptor):
+    try:
+
+    except Exception as ex:
+        print(ex)                                                
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <p>Incluimos la configuración inicial:</p>
+                                <pre>
+                                    <code>
+server = smtplib.SMTP("smtp.gmail.com", 587)
+server.ehlo()
+server.starttls()
+server.ehlo()
+
+server.login(email, clave)
+                                    </code>
+                                </pre>
+                                <p>Ahora, una breve explicación del código. Primero iniciamos una variable llamada
+                                    <i>server</i>, la cual se conecta al servidor de la plataforma de correos electrónicos (la
+                                    URL y el número que representa el puerto al que nos vamos a conectar cambia
+                                    dependiendo de la plataforma, por ejemplo, el outlook usaría
+                                    <i>smtplib.SMTP(“smtp.live.com”, 25)</i>).</p>
+                                <p>El método <i>ehlo()</i> sirve para indicar al servidor que se prepare para recibir comandos
+                                    de una aplicación externa. <i>starttls()</i> es un método de encriptación para conectarse
+                                    de forma segura.</p>
+                                <p>Por último, usamos el método <i>login(email_del_emisor, clave)</i> para iniciar sesión.</p>
+                            </li>
+                            <li>
+                                <p>Creamos el objeto del mensaje</p>
+                                <pre>
+                                    <code>
+asunto = "Esta es una prueba."
+body = "Hola este es un mail de prueba."
+
+msg = MIMEText(body.encode('UTF-8'), 'plain', 'UTF-8')
+msg["From"] = email
+msg["To"] = receptor
+msg["Subject"] = asunto
+                                    </code>
+                                </pre>
+                                <p>Primero empezamos con dos variables que contienen el mensaje (variable <i>body</i>) en sí y
+                                    el asunto del email. Luego creamos un objeto MIME, el cual nos permitirá la
+                                    codificación a utf-8, si no hacemos esto, no podremos incluir caracteres exclusivos
+                                    del español, como tildes o la letra “ñ”.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Por último, enviamos el correo con la función <i>sendmail()</i> que recibe el emisor, el
+                                    receptor y el objeto MIME que contiene el mensaje y cerramos sesión.</p>
+                                <pre>
+                                    <code>
+server.sendmail(
+    email,
+    receptor,
+    msg.as_string()
+)
+
+server.quit()
+                                    </code>
+                                </pre>
+                            </li>
+                            <li>
+                                <p>
+                                    ¡Listo! Ahora llamamos al método que creamos al principio con los datos necesarios y
+                                    debería enviarse correctamente. Para probarlo puedes mandar el email al mismo
+                                    correo electrónico que estás usando para mandarlo.
+                                </p>
+                                <pre>
+                                    <code>
+mandar_mail(email, clave, receptor)
+                                    </code>
+                                </pre>
+                            </li>
+                        </ol>
+
+
+
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+
+</html>
