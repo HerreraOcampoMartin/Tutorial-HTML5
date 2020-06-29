@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 	<url>
-		<loc>https://crear-paginas-web.netlify.app/index.html</loc>
+		<loc>https://crear-paginas-web.netlify.app/inicio-web.html</loc>
 		<changefreq>never</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -19,6 +19,21 @@
 
 	<url>
 		<loc>https://crear-paginas-web.netlify.app/encuesta-stack-overflow-2020.html</loc>
+		<changefreq>never</changefreq>
+	</url>
+
+	<url>
+		<loc>https://crear-paginas-web.netlify.app/que-es-python.html</loc>
+		<changefreq>never</changefreq>
+	</url>
+
+	<url>
+		<loc>https://crear-paginas-web.netlify.app/descargar-python.html</loc>
+		<changefreq>never</changefreq>
+	</url>
+
+	<url>
+		<loc>https://crear-paginas-web.netlify.app/primeros-pasos-python.html</loc>
 		<changefreq>never</changefreq>
 	</url>
 
