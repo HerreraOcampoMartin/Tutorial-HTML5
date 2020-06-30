@@ -10,4 +10,6 @@ router.get("/", (req, res) => {
 
 app.use(router);
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT, () => {
+    console.log("HOLA")
+});
