@@ -1930,6 +1930,11 @@ header.major> :last-child {
   text-align: center;
 }
 
+.description{
+  color: rgb(99, 99, 99);
+  font-style: italic;
+}
+
 .content-list>a:hover {
   text-decoration: underline;
 }
